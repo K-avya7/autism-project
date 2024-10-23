@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <!-- Header and image section -->
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you! Please fill out the form below and we will get in touch with you shortly.</p>
+        </div>
+    </div>
+
+    <!-- Image section -->
+    <div class="row">
+        <div class="col-md-12">
+            <img src="/static/img/img4.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <div class="form-container p-4 shadow-sm rounded bg-light">
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <!-- Form fields -->
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

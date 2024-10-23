@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}  <!-- Load static tag for referencing static files -->
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<header>
+    <div class="header-container">
+        <img src="/static/img/img11.jpg" alt="Autism Awareness" class="banner-image">
+        <h1>About Us</h1>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container">
+        <h2>Who We Are</h2>
+        <p>Welcome to Autism Info, a platform dedicated to providing accurate and accessible information about autism. We started this journey on <span id="start-date"></span> with a mission to raise awareness and support for individuals with autism and their families.</p>
+        
+        <h2>Our Motivation</h2>
+        <p>Our primary motivation for creating this website is to increase awareness about autism and make reliable information easily accessible to everyone. We aim to create a safe, supportive space where families, caregivers, and individuals can find resources, guidance, and a sense of community.</p>
+
+        <h2>Our Mission</h2>
+        <p>We believe that knowledge empowers individuals and families. By providing comprehensive information on autism, early intervention, and support, we hope to enhance the quality of life for people with autism and their loved ones. Together, we can make a difference!</p>
+    </div>
+</section>
+
+
+
+<script>
+// Set today's date as the starting date
+document.getElementById('start-date').innerText = new Date().toLocaleDateString();
+</script>
+{% endblock body %}

@@ -1,0 +1,76 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Services2
+{% endblock title %}
+
+{% block body %}
+<div id="list-example" class="list-group mb-4">
+    <a class="list-group-item list-group-item-action" href="#list-item-1">Support Meetings</a>
+    <a class="list-group-item list-group-item-action" href="#list-item-2">Playdates</a>
+    <a class="list-group-item list-group-item-action" href="#list-item-3">Helpline</a>
+</div>
+
+<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+    
+    <!-- Support Meetings Section -->
+    <div class="mb-5">
+        <h4 id="list-item-1">Support Meetings</h4>
+        <img class="card-img-top img-fluid mb-3" src="/static/img/img12.jpg" alt="Support Meeting Image" style="height: 500px; object-fit: cover; width: 100%;">
+        <p>
+            <i class="fas fa-users"></i> Join our weekly meetings where parents gather to share experiences and support each other. <br>
+            <i class="fas fa-calendar-alt"></i> The meetings are held <strong>every Saturday</strong> at 5 PM at the town center. <br>
+            <i class="fas fa-map-marker-alt"></i> Location: Town Center <br>
+            <i class="fas fa-edit"></i> If you want to be a part of the next meet, just fill out the form below! Come and be a part of this community where you can share your experiences while gaining insight from experienced professionals as well as other parents!
+        </p>
+        
+        <!-- Form -->
+        <form action="{% url 'services2' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="program-participation">Do you know someone part of the program?</label>
+                <select class="form-control" id="program-participation" name="program_participation" required>
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">
+                <i class="fas fa-paper-plane"></i> Submit
+            </button>
+        </form>
+    </div>
+    
+    <!-- Playdates Section -->
+    <div class="mb-5">
+        <h4 id="list-item-2">Playdates</h4>
+        <img class="card-img-top img-fluid mb-3" src="/static/img/img13.jpg" alt="Playdates Image" style="height: 500px; object-fit: cover; width: 100%;">
+        <p>Bring your kids to our playdates, where they can interact with other autistic children in a fun and safe environment.</p>
+        <button class="btn btn-info" onclick="alert('Next playdate: Saturday, 10 AM')">See Next Playdate</button>
+    </div>
+    
+    <!-- Helpline Section -->
+    <div class="mb-5">
+        <h4 id="list-item-3">Helpline</h4>
+        <img class="card-img-top img-fluid mb-3" src="/static/img/img14.jpg" alt="Helpline Image" style="height: 500px; object-fit: cover; width: 100%;">
+        <p>Got concerns or questions? Reach out to the national autism helpline for advice and support.</p>
+        <button class="btn btn-primary" onclick="alert('Helpline Number: 123-456-7890')">Call Helpline</button>
+    </div>
+</div>
+{% endblock body %}

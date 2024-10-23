@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% block title %}Autism Awareness{% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Autism</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            margin: 20px 0;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .img-placeholder {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .img-placeholder img {
+            transition: transform 0.5s ease;
+        }
+
+        .img-placeholder:hover img {
+            transform: scale(1.05);
+        }
+
+        .btn-custom {
+            background-color: #6c8ead;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #5a7d99;
+        }
+
+        .section-header,
+        .content ul,
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        .faq-section {
+            background-color: #dfe9f3;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .faq-section .faq {
+            margin: 10px 0;
+        }
+
+        .faq-section .faq h5 {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .faq-section .faq p {
+            color: #555;
+        }
+
+        .testimonials {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f7fbfc;
+            border-radius: 10px;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        .testimonial-card h6 {
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center my-4">Understanding Autism</h1>
+
+        <!-- What is Autism Section -->
+        <div class="section-header text-center">
+            <div class="img-placeholder">
+                <img src="/static/img/img10.jpg" alt="What is Autism">
+            </div>
+            <h2>What is Autism?</h2>
+        </div>
+        <div class="content">
+            <p>Autism, or Autism Spectrum Disorder (ASD), is a developmental disorder that impacts how a person communicates and experiences the world around them. It’s called a “spectrum” because it affects people differently, with some individuals requiring more support than others. While challenges may exist in social interactions and behavior, many people on the spectrum possess incredible talents and skills.</p>
+            <p>Early diagnosis and intervention can significantly improve outcomes, allowing individuals to develop skills that help them thrive in everyday life.</p>
+        </div>
+
+        <!-- How to Identify Autism Section -->
+        <div class="section-header text-center">
+            <div class="img-placeholder">
+                <img src="/static/img/img9.jpg" alt="How to Identify Autism">
+            </div>
+            <h2>How to Identify Autism</h2>
+        </div>
+        <div class="content">
+            <p>Signs of autism often appear early in childhood. Some common indicators include:</p>
+            <ul>
+                <li>Limited or no eye contact</li>
+                <li>Difficulty with verbal and non-verbal communication</li>
+                <li>Repetitive behaviors or routines</li>
+                <li>Challenges in understanding others' emotions</li>
+                <li>Strong preferences or aversions to sensory stimuli</li>
+            </ul>
+        </div>
+
+        <!-- How to Deal with Autism Section -->
+        <div class="section-header text-center">
+            <div class="img-placeholder">
+                <img src="/static/img/img8.jpeg" alt="How to Deal with Autism">
+            </div>
+            <h2>How to Support Someone with Autism</h2>
+        </div>
+        <div class="content">
+            <p>Supporting someone with autism can be highly rewarding but may require special approaches. Here are a few strategies:</p>
+            <ul>
+                <li>Provide consistent routines to create a predictable environment</li>
+                <li>Utilize visual aids to communicate effectively</li>
+                <li>Offer positive reinforcement for achievements</li>
+                <li>Engage with sensory-friendly activities</li>
+                <li>Work closely with therapists and specialists to address specific challenges</li>
+            </ul>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <h5>Q: Can individuals with autism lead independent lives?</h5>
+                <p>A: Many people with autism are capable of leading independent lives. However, the level of independence can vary. With early intervention and proper support, individuals can learn skills to navigate everyday life.</p>
+            </div>
+            <div class="faq">
+                <h5>Q: Is there a cure for autism?</h5>
+                <p>A: Autism is not something that can be cured, as it is part of a person’s neurological make-up. However, with therapies and support, individuals can lead fulfilling and productive lives.</p>
+            </div>
+            <div class="faq">
+                <h5>Q: Can autism be diagnosed at any age?</h5>
+                <p>A: Yes, autism can be diagnosed at any age, although signs are often noticed in early childhood. Adults can also receive a diagnosis if they exhibit characteristics of autism.</p>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="testimonials">
+            <h2 class="text-center">What People Are Saying</h2>
+            <div class="testimonial-card">
+                <p>"Autism doesn’t define who my child is. With the right support, he has thrived beyond what we ever expected. This journey has taught me so much about patience and love."</p>
+                <h6>— Jane, Parent</h6>
+            </div>
+            <div class="testimonial-card">
+                <p>"I’ve worked with many individuals with autism, and I continue to be inspired by their resilience and uniqueness. It’s a privilege to witness their progress."</p>
+                <h6>— Sarah, Occupational Therapist</h6>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="text-center">
+            <a href="https://www.example.com/autism-resources" target="_blank">
+                <button class="btn-custom mt-4">Learn More</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+{% endblock body %}
